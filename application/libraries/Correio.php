@@ -16,23 +16,27 @@ class Correio {
         $config = Array(
             //'useragent'=> 'sendmail',
             'protocol' => 'smtp',
-            'smtp_host' => 'smtp.hosang.adv.br',
-            'smtp_port' => 587,
+            'smtp_host' => 'mail.2dejulho.org',
+            'smtp_port' => 25,
             //'validate'=>'TRUE',
-            'smtp_user' => 'advocacia@hosang.adv.br',
-            'smtp_pass' => 'Hos_Adv056007',
+            'smtp_user' => 'associacao',
+            'smtp_pass' => '@2dejulho',
+            //'smtp_auth' => TRUE,
             'mailtype' => 'html',
+            //'wordwrap'=> TRUE,
             'charset' => 'utf-8',
             //"newline"=>"\r\n",
+            //'crlf'=>"\r\n"
             //'smtp_crypto'=>'tls',
         );
+        
         
         $this->CI->load->library('email');
         $this->CI->email->initialize($config);
         $this->CI->email->set_newline("\r\n");
-        $this->CI->email->from('advocacia@hosang.adv.br', 'Hosang Advocacia', 'advocacia@hosang.adv.br');
+        $this->CI->email->from('associacao@2dejulho.org', 'Associação 2 de Julho', 'associacao@2dejulho.org');
         $this->CI->email->to($to);
-        $this->CI->email->reply_to('advocacia@hosang.adv.br', 'Hosang Advocacia');
+        $this->CI->email->reply_to('associacao@2dejulho.org', 'Associação 2 de Julho');
         $this->CI->email->subject($title);
         $this->CI->email->message($message);
         return $this->CI->email->send();

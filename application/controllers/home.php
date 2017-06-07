@@ -46,8 +46,8 @@ class Home extends CI_Controller {
             $msg.= "Mensagem: ".$mensagem."<br><br>";
             $msg.= "---------------------------<br>Fim da Mensagem";
             
-            
-            if(!$this->correio->sendMail("advocacia@hosang.adv.br", "Contato através do site - ", $msg)){
+            $this->load->library('correio');
+            if(!$this->correio->sendMail("claudiorcneto@yahoo.com.br", "Contato através do site - ", $msg)){
                 throw new Exception("Erro ao enviar a mensagem");
             }
             $this->msg->sucesso("Mensagem enviada. Aguarde nosso contato.");

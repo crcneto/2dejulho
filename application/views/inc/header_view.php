@@ -5,7 +5,7 @@
         <title>.: 2 de Julho :.</title>
         <link rel="stylesheet" href="<?= site_url('public/css/bootstrap.min.css') ?>" />
         <link rel="stylesheet" href="<?= site_url('public/css/style.css') ?>" />
-        <link rel="shortcut icon" href="<?= site_url('public/img/doisdejulho.ico') ?>" />
+        <link rel="shortcut icon" href="<?= site_url('public/img/logo.ico') ?>" />
         <link rel="stylesheet" href="<?= site_url('public/css/bootstrap-select.min.css')?>">
         <meta charset="utf-8">
         <script src="<?= site_url('public/js/jquery-3.1.1.min.js') ?>"></script>
@@ -33,7 +33,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= site_url() ?>"><span><img src="<?= site_url('public/img/doisdejulho.jpg')?>" height="20" width="20"/></span>&nbsp;<span>Associação 2 de Julho</span></a>
+                    <a class="navbar-brand" href="<?= site_url() ?>"><span><img src="<?= site_url('public/img/logo.png')?>" height="20" width="20"/></span>&nbsp;<span>Associação 2 de Julho</span></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
