@@ -18,6 +18,14 @@ class Home extends CI_Controller {
         $this->load->view('inc/footer_view');
     }
     
+    public function erro(){
+        $this->load->view('inc/header_view');
+
+        $this->load->view('erro/e404_view');
+
+        $this->load->view('inc/footer_view');
+    }
+    
     public function send(){
         $toView = [];
         

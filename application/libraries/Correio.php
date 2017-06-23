@@ -21,7 +21,7 @@ class Correio {
             //'validate'=>'TRUE',
             'smtp_user' => 'associacao',
             'smtp_pass' => '@2dejulho',
-            //'smtp_auth' => TRUE,
+            'smtp_auth' => TRUE,
             'mailtype' => 'html',
             //'wordwrap'=> TRUE,
             'charset' => 'utf-8',
