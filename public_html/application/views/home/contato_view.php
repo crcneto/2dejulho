@@ -1,12 +1,12 @@
-<div class="container">
+<div class="container" style="padding-top: 30px;">
     <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <div class="panel panel-default col-md-6">
         <h1 class="text-center">Contato</h1>
         <br>
         <p>Dúvidas, sugestões ou reclamações, entre em contato com a gente. Envie um e-mail para <a href="mailto:secretaria@2dejulho.org">secretaria@2dejulho.org</a> ou preencha o formulário abaixo.</p>
         <p>Agradecemos o seu contato.</p>
         <br>
-        <form action="<?= site_url('home/send') ?>" method="post">
+        <form action="<?= site_url('home/send') ?>" method="post" style="padding-bottom: 30px;">
             <label>Seu nome</label>
             <input type="text" name="nome" class="form-control" value="<?php if (isset($req['nome'])) {
     echo $req['nome'];

@@ -55,16 +55,16 @@ class Home extends CI_Controller {
                 throw new Exception("Mensagem inválida");
             }
             
-            $msg = "Contato via site:<br>";
-            $msg.= "Nome: ".$nome."<br>";
-            $msg.= "E-mail: ".$email."<br>";
-            $msg.= "Telefone: ".$telefone."<br>";
-            $msg.= "T&iacute;tulo: ".$titulo."<br>";
+            $msg = "Contato via site:<br><br>";
+            $msg.= "Nome: ".$nome."<br><br>";
+            $msg.= "E-mail: ".$email."<br><br>";
+            $msg.= "Telefone: ".$telefone."<br><br>";
+            $msg.= "T&iacute;tulo: ".$titulo."<br><br><br>";
             $msg.= "Mensagem: ".$mensagem."<br><br>";
             $msg.= "---------------------------<br>Fim da Mensagem";
             
             $this->load->library('correio');
-            if(!$this->correio->sendMail("claudiorcneto@yahoo.com.br", "Contato através do site - ", $msg)){
+            if(!$this->correio->enviar_email("secretaria@2dejulho.org", "Contato através do site - $email", $msg)){
                 throw new Exception("Erro ao enviar a mensagem");
             }
             $this->msg->sucesso("Mensagem enviada. Aguarde nosso contato.");
