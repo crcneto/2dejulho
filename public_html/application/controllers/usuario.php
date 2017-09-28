@@ -1,9 +1,26 @@
-<?php
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Usuario extends CI_Controller {
 
     public function index() {
+        $to_view = [];
         
+        try{
+            
+            $this->load->model('usuario_model');
+            $users = $this->us->todos_id();
+            
+            echo "<pre>";
+            print_r($users);
+            die();
+            
+            
+            
+        } catch (Exception $ex) {
+            $this->msg->erro($ex->getMessage());
+        } finally {
+            redirect(site_url());
+        }
     }
 
     public function alterar_senha() {
