@@ -29,6 +29,8 @@ class Autenticacao extends CI_Controller {
             
             $this->load->helper('email');
             
+            
+            
             if (!valid_email($email)) {
                 throw new Exception("E-mail inválido");
             }
@@ -38,21 +40,21 @@ class Autenticacao extends CI_Controller {
             }
             
             if($this->usuario_model->login($email, $senha)){
-                $user = $this->usuario_model->get_by_email($email);
+                $user = $this->usuario_model->carrega_usuario_por_email($email);
+                
                 if(!$user){
                     throw new Exception("Usuário não encontrado");
                 }else{
                     $this->session->set_userdata("usuario", $user);
                     $this->session->set_userdata("operador", $user['id']);
+                    
                     $this->session->set_userdata("autenticado", "true");
-                    $this->session->set_userdata("acesso", $user['tipo']);
                     $this->msg->sucesso("Seja bem-vindo!");
                 }
             }else{
+                print_r($email); die();
                 throw new Exception("Combinação de login e senha incorretos");
             }
-            
-            
         } catch (Exception $ex) {
             $this->msg->erro($ex->getMessage());
         } finally {
