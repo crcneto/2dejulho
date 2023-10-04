@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'neto';
-$db['default']['password'] = '4520';
-$db['default']['database'] = '2dejulho';
+$db['default']['username'] = 'dejulhoorg_system';
+$db['default']['password'] = 'Associação2dejulho';
+$db['default']['database'] = 'dejulhoorg_db';
 $db['default']['dbdriver'] = 'postgre';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
